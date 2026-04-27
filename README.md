@@ -60,7 +60,11 @@ Objectif : Travailler sur l'automatisation de vos tests
 Difficulté : Moyenne (~120 minutes)
 ---------------------------------------------------
 **Consignes : Retrouvez les consignes de votre atelier sur votre site pythonanywhere**    
-Vous pouvez retrouver le travail demandé dans le cadre de cet atelier directement sur votre site pythonanywhere (ex: monuser.pythonanywhere.com).    
+Vous pouvez retrouver le travail demandé dans le cadre de cet atelier directement sur votre site pythonanywhere (ex: monuser.pythonanywhere.com).  
+
+<img width="2159" height="564" alt="image" src="https://github.com/user-attachments/assets/4f4eb7df-d47a-4121-8b19-4f8721d30d06" />
+<img width="995" height="635" alt="image" src="https://github.com/user-attachments/assets/08181b2a-839e-44f6-ae1c-00420518979b" />
+
    
 --------------------------------------------------------------------
 🧠 Troubleshooting :
@@ -75,7 +79,3 @@ Vos log sont accéssible via les URL suivantes :
 * Error log : {site}.pythonanywhere.com.error.log
 * Server log: {site}.pythonanywhere.com.server.log
 
-
-
-
-Test API

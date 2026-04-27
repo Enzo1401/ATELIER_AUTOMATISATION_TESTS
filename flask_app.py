@@ -1,16 +1,17 @@
-from flask import Flask, render_template_string, render_template, jsonify, request, redirect, url_for, session
-from flask import render_template
-from flask import json
-from urllib.request import urlopen
-from werkzeug.utils import secure_filename
-import sqlite3
+from flask import Flask, render_template_string
+import storage
+import sys
 
 app = Flask(__name__)
 
-@app.get("/")
-def consignes():
-     return render_template('consignes.html')
+@app.route('/')
+def dashboard():
+    history = storage.get_history()
+    html = '<h1>📊 Monitoring API (Agify)</h1><table border="1"><tr><th>Date</th><th>Succès</th><th>Échecs</th><th>Latence</th></tr>'
+    for r in history:
+        html += f'<tr><td>{r[1]}</td><td>{r[2]}</td><td>{r[3]}</td><td>{r[4]} ms</td></tr>'
+    return html + '</table><br><a href="/health">Voir Healthcheck</a>'
 
-if __name__ == "__main__":
-    # utile en local uniquement
-    app.run(host="0.0.0.0", port=5000, debug=True)
+@app.route('/health')
+def health():
+    return {"status": "healthy", "api": "Agify"}, 200
